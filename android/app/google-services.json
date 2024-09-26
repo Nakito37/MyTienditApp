@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "384087840161",
+    "project_id": "mytienditapp",
+    "storage_bucket": "mytienditapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:384087840161:android:7306cb47941dbb4bad67e0",
+        "android_client_info": {
+          "package_name": "com.tienditapp.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBOLOOmSkfNlkj9YUmocaoFvvE7qCve66c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

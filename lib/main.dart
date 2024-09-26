@@ -1,20 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:my_tienditapp/routes/routes.dart';
+import 'firebase_options.dart';  // Importa el archivo generado para las opciones de Firebase
 
-void main() {
-  runApp(const MainApp());
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return MaterialApp(
+      title: 'My Tiendita App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      onGenerateRoute: Routes.generateRoute,
+      initialRoute: '/login',
     );
   }
 }
